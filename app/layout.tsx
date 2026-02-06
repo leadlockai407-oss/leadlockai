@@ -1,14 +1,21 @@
-export default function RootLayout({
+import "./globals.css";
+import type { Metadata } from "next";
+
+export const metadate: Metadata = {
+    title: "My App",
+  description:  "My Next.js App",
+};
+
+export default funcation RootLayout({
   children,
 }:  {
-    children: React.ReactNode;
-})  {
-  return (
+  children: React.ReactNode;
+}) { 
+  return ( 
     <html lang="en">
-      <body style={{ margin: 0,
-fontFamily: "sans-serif" }}>
-      {children}
-    </body>
+      <body className="sans-serif">
+        {children}
+      </body>
     </html>
-    );
-}
+  );
+}  
